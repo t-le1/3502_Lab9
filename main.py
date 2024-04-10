@@ -17,7 +17,7 @@ def encode(password):
     return encoded
 
 def decode(encoded):
-    pass
+    password = encoded
 
 def main():
     encoded = ''
