@@ -16,7 +16,7 @@ def display_menu():
 3. Quit\n""")
 
 def decode(encoded):
-    decoded = " "
+    decoded = ""
     for digit in encoded:
         if int(digit) < 3:
             shifted = (int(digit) + 10) - 3
@@ -36,7 +36,7 @@ def main():
             print("Your password has been encoded and stored!")
         elif option == 2: # Decode
             decoded = decode(encoded)
-            print(f"The encoded password is {encoded}, and the original password is {decoded}.")
+            print(f"The encoded password is {encoded}, and the original password is {decoded}.\n")
         else:
             break
 
