@@ -1,11 +1,4 @@
 # Tim Le
-def display_menu():
-    print("""Menu
--------------
-1. Encode
-2. Decode
-3. Quit\n""")
-
 def encode(password):
     encoded = ''
     for digit in password:
@@ -15,9 +8,22 @@ def encode(password):
         else:
             encoded += str(shifted)
     return encoded
+def display_menu():
+    print("""Menu
+-------------
+1. Encode
+2. Decode
+3. Quit\n""")
 
 def decode(encoded):
-    password = encoded
+    decoded = " "
+    for digit in encoded:
+        if int(digit) < 3:
+            shifted = (int(digit) + 10) - 3
+        else:
+            shifted = int(digit) - 3
+        decoded += str(shifted)
+    return decoded
 
 def main():
     encoded = ''
